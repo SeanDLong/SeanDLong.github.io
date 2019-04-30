@@ -1,0 +1,39 @@
+name: "Sean D. Long"
+output_dir: "."
+navbar:
+  title: "Sean D. Long"
+  left:
+    - text: "Home"
+      icon: fa-home fa-lg
+      href: home.html
+    - text: "Projects"
+      icon: fa-book fa-lg
+      menu:
+        - text: "Women and Political Ambition: Running for Us or Running for Me?"
+          href: DeMora_et_al_2019.html
+        - text: "--------------"
+        - text: "The Muted Effect of #MeToo on Elite’s Civic Engagement Recruitment"
+          href: Burnet_et_al_2019.html
+        - text: "--------------"
+        - text: "Counterstereotypic Gender Strategies and Candidate Trait and Issue Evaluations"
+          href: Manganiello_et_al_2019.html
+        - text: "--------------"
+        - text: "Moral Credit and the 2016 Election: Voting for the Female Candidate to be Sexist"
+          href: El-Khatib_2019.html
+    - text: "People"
+      href: people.html
+      icon: fa-users fa-lg
+    - text: "Activities"
+      icon: fa-female fa-lg
+      href: activities.html
+
+  right:
+    - icon: fa-envelope fa-lg
+      href: contact.html
+    - icon: fa-github fa-lg
+      href: http://github.com/SeanDLong
+
+output:
+  html_document:
+    theme: paper
+    css: 'styles.css'
