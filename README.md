@@ -1,7 +1,7 @@
 ## Sean Long's Personal Website Log:
 
 
-SDL: Created repo.
+- SDL: Created repo.
 
 
-SLD: I created a project with some To-Do's. We'll go throught them at GradQuant. :-)
+- SLD: I created a project with some To-Do's. We'll go throught them at GradQuant. :-)
