@@ -30,6 +30,10 @@
 
 #
 
+#
+
+#
+
 <center>
 
 #### <i> How the 2016 Election Made Extremist Discourse Mainstream </i>
@@ -37,6 +41,11 @@
 #### The 2016 election brought names like Richard Spencer and Steve Bannon into the mainstream and focused attention on the rise of the so-called ``alt-right''. While popular media has decried the growth of right-wing news outlets like Breitbart News, little sustained academic research has examined the spread of alt-right ideas or their apparent influence over modern conservative discourse. This project uses a combination of text-based machine learning techniques to develop models of media trends for both extremist and more mainstream conservative news organizations. By scraping thousands of blog posts from the white supremacist Daily Stormer, and conservative news outlet Breitbart News, we show how the 2016 election created the opportunity for white supremacist rhetoric to begin to influence mainstream conservative discourse. Our findings demonstrate that extremist ideas significantly shaped and influenced conservative news during and after the 2016 election. This project emphasizes the salient nature of right-wing extremism in modern American political discourse.
 
 #### This project is being completed alongside [Dr. Loren Collingwood](https://www.collingwoodresearch.com/)
+
+
+#
+
+#
 
 #
 
