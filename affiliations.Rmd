@@ -17,6 +17,12 @@
 
 #
 
+#
+
+#
+
+#
+
 <center>
 
 #### <i> Center for Social Innovation </i>
@@ -43,10 +49,11 @@
 <center>
 
 #### <i> Professional Colleagues </i>
-####  Because no scholar works alone, I am also indebted to my colleagues with the [UCR Political Science Department] (https://politicalscience.ucr.edu/)
+####  Because no scholar works alone, I am also indebted to my colleagues with the [UCR Political Science Department](https://politicalscience.ucr.edu/)
 
 #
-#### This includes my advisor, [Dr. Loren Collingwood](https://www.collingwoodresearch.com/) and my fellow student [Stephanie DeMora] (https://www.stephaniedemora.com/)
+<center>
+#### This includes my advisor, [Dr. Loren Collingwood](https://www.collingwoodresearch.com/) and my fellow student [Stephanie DeMora](https://www.stephaniedemora.com/)
 #
 
 #
