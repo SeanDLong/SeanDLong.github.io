@@ -20,10 +20,9 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -32,12 +31,10 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
 }
 </script>
 
@@ -72,7 +69,9 @@ h6 {
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
+</head>
 
+<body>
 
 <style type = "text/css">
 .main-container {
@@ -91,14 +90,8 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
-.html-widget {
-  margin-bottom: 20px;
-}
 button.code-folding-btn:focus {
   outline: none;
-}
-summary {
-  display: list-item;
 }
 </style>
 
@@ -114,6 +107,7 @@ body {
   padding-top: 69px;
   margin-top: -69px;
 }
+
 .section h2 {
   padding-top: 69px;
   margin-top: -69px;
@@ -133,43 +127,6 @@ body {
 .section h6 {
   padding-top: 69px;
   margin-top: -69px;
-}
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -191,85 +148,19 @@ $(document).ready(function () {
 });
 </script>
 
+
+<div class="container-fluid main-container">
+
 <!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
-  display: none;
-}
-</style>
-
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
 });
 </script>
 
 <!-- code folding -->
 
 
-
-
-</head>
-
-<body>
-
-
-<div class="container-fluid main-container">
 
 
 
@@ -288,6 +179,27 @@ $(document).ready(function () {
       <ul class="nav navbar-nav">
         <li>
   <a href="home.html">Home</a>
+</li>
+<li>
+  <a href="research.html">
+    <span class="fa fa-users fa-lg"></span>
+     
+    Research
+  </a>
+</li>
+<li>
+  <a href="affiliations.html">
+    <span class="fa fa-female fa-lg"></span>
+     
+    Affiliations
+  </a>
+</li>
+<li>
+  <a href="contact.html">
+    <span class="fa fa-female fa-lg"></span>
+     
+    Contact
+  </a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -311,57 +223,54 @@ $(document).ready(function () {
 
 
 <p><link rel="stylesheet" href="styles.css" type="text/css"></p>
-<div id="examples-in-markdown-andor-html" class="section level1">
-<h1>Examples in Markdown and/or HTML:</h1>
+<p><img src="images/Hood.jpg" style="width:50%; border:10px solid; margin-right: 20px" align="left"></p>
+<div id="section" class="section level3">
+<h3></h3>
 </div>
-<div id="section" class="section level1">
-<h1></h1>
+<div id="section-1" class="section level3">
+<h3></h3>
 </div>
-<div id="section-1" class="section level1">
-<h1></h1>
-<p><img src="images/Long.jpg" style="width:50%; border:10px solid; margin-right: 20px" align="left"></p>
 <div id="section-2" class="section level3">
 <h3></h3>
 </div>
 <div id="section-3" class="section level3">
 <h3></h3>
 </div>
+<div id="my-name-is-sean-long.-i-am-a-second-year-phd-student-with-the-uc-riverside-political-science-department-httpspoliticalscience.ucr.edu" class="section level3">
+<h3>My name is Sean Long. I am a second year PhD student with the [UC Riverside Political Science Department] (<a href="https://politicalscience.ucr.edu/" class="uri">https://politicalscience.ucr.edu/</a>)</h3>
+</div>
 <div id="section-4" class="section level3">
 <h3></h3>
 </div>
 <div id="section-5" class="section level3">
 <h3></h3>
+<div id="i-am-primarily-interested-in-quantitative-research-on-questions-of-political-behavior-and-communication-in-the-united-states.-specifically-i-work-on-projects-devoted-to-understanding-political-extremism-social-identity-and-the-role-of-the-media-in-american-politics.-primarily-using-r-i-focus-on-methods-leveraging-text-data-and-other-observation-data-for-causal-inference." class="section level4">
+<h4>I am primarily interested in quantitative research on questions of political behavior and communication in the United States. Specifically, I work on projects devoted to understanding political extremism, social identity, and the role of the media in American politics. Primarily using R, I focus on methods leveraging text data and other observation data for causal inference.</h4>
 </div>
-<div id="we-are-the-gender-laboratory-in-the-department-of-political-science-at-the-university-of-california-riverside" class="section level3">
-<h3>We are the Gender Laboratory in the Department of <a href="https://politicalscience.ucr.edu/">Political Science at the University of California, Riverside</a>!</h3>
+<div id="check-out-more-details-on-my-ongoing-proects.-httpsseandlong.github.ioresearch" class="section level4">
+<h4>Check out more [details on my ongoing proects.] (<a href="https://seandlong.github.io/research" class="uri">https://seandlong.github.io/research</a>)</h4>
 </div>
-<div id="section-6" class="section level3">
-<h3></h3>
-</div>
-<div id="section-7" class="section level3">
-<h3></h3>
-<div id="our-lab-is-comprised-of-several-teams-which-work-on-individual-research-projects-relating-to-gender-and-politics.-together-we-collaborate-brainstorm-and-share-resources-regularly." class="section level4">
-<h4>Our lab is comprised of several teams which work on individual research projects relating to gender and politics. Together, we collaborate, brainstorm, and share resources regularly.</h4>
-</div>
-<div id="section-8" class="section level4">
+<div id="section-6" class="section level4">
 <h4></h4>
 </div>
-<div id="section-9" class="section level4">
+<div id="section-7" class="section level4">
 <h4></h4>
 </div>
-<div id="please-visit-our-projects-tab-for-more-information-about-our-research-groups-and-our-progress." class="section level4">
-<h4>Please visit our <a href="https://ucr-gender-lab.github.io/projects.html">projects</a> tab for more information about our research groups and our progress.</h4>
-</div>
-<div id="section-10" class="section level4">
-<h4></h4>
-</div>
-<div id="section-11" class="section level4">
-<h4></h4>
-</div>
-<div id="our-current-lab-director-is-dr.jennifer-merolla." class="section level4">
-<h4>Our current lab director is: <a href="https://jennifermerollaphd.wordpress.com/">Dr. Jennifer Merolla</a>.</h4>
+<div id="please-visit-this-page-for-more-information-on-my-professional-affiliations-and-colleagues." class="section level4">
+<h4>Please visit <a href="https://seandlong.github.io/affiliations">this page</a> for more information on my professional affiliations and colleagues.</h4>
 </div>
 </div>
+<div id="section-8" class="section level1">
+<h1></h1>
+</div>
+<div id="section-9" class="section level1">
+<h1></h1>
+</div>
+<div id="section-10" class="section level1">
+<h1></h1>
+</div>
+<div id="section-11" class="section level1">
+<h1></h1>
 </div>
 <div id="section-12" class="section level1">
 <h1></h1>
@@ -383,20 +292,8 @@ $(document).ready(function () {
 </div>
 <div id="section-18" class="section level1">
 <h1></h1>
-</div>
-<div id="section-19" class="section level1">
-<h1></h1>
-</div>
-<div id="section-20" class="section level1">
-<h1></h1>
-</div>
-<div id="section-21" class="section level1">
-<h1></h1>
-</div>
-<div id="section-22" class="section level1">
-<h1></h1>
 <center>
-This website was created and is maintained by <a href="https://www.stephaniedemora.com/">Stephanie L. DeMora</a>
+This website was created and is maintained by Sean Long
 </center>
 </div>
 

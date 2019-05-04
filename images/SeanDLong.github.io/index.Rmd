@@ -1,0 +1,57 @@
+---
+---
+
+<link rel="stylesheet" href="styles.css" type="text/css">
+
+
+<img src="images/Hood.jpg" style="width:50%; border:10px solid; margin-right: 20px" align="left">
+
+###
+
+###
+
+###
+
+###
+
+### My name is Sean Long. I am a second year PhD student with the [UC Riverside Political Science Department] (https://politicalscience.ucr.edu/)
+
+###
+
+###
+
+#### I am primarily interested in quantitative research on questions of political behavior and communication in the United States. Check out more [details on my research interests and ongoing proects.] (https://seandlong.github.io/research)
+
+####
+
+####
+
+#### Please visit [this page](https://seandlong.github.io/affiliations) for more information on my professional affiliations and colleagues.
+
+
+#
+
+#
+
+#
+
+#
+
+#
+
+#
+
+#
+
+#
+
+#
+
+#
+
+#
+
+
+<center>
+This website was created and is maintained by Sean Long
+</center>

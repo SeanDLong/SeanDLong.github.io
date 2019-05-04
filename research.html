@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+
+.section h2 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h3 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h4 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h5 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h6 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Sean D. Long</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="home.html">Home</a>
+</li>
+<li>
+  <a href="research.html">
+    <span class="fa fa-users fa-lg"></span>
+     
+    Research
+  </a>
+</li>
+<li>
+  <a href="affiliations.html">
+    <span class="fa fa-female fa-lg"></span>
+     
+    Affiliations
+  </a>
+</li>
+<li>
+  <a href="contact.html">
+    <span class="fa fa-female fa-lg"></span>
+     
+    Contact
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="http://github.com/SeanDLong">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><link rel="stylesheet" href="styles.css" type="text/css"></p>
+<center>
+<img src="images/Joshua.jpg" style="width:50%; border:10px solid; margin-right: 20px" align="middle">
+</center>
+<div id="section" class="section level1">
+<h1></h1>
+</div>
+<div id="section-1" class="section level1">
+<h1></h1>
+</div>
+<div id="section-2" class="section level1">
+<h1></h1>
+</div>
+<div id="section-3" class="section level1">
+<h1></h1>
+<center>
+<div id="can-states-promote-minority-representation-assessing-the-effects-of-the-california-voting-rights-act" class="section level4">
+<h4><i> Can States Promote Minority Representation? Assessing the Effects of the California Voting Rights Act </i></h4>
+</div>
+<div id="under-review-with-urban-affairs-review" class="section level4">
+<h4>Under Review with <i> Urban Affairs Review </i></h4>
+</div>
+<div id="the-passage-of-the-california-voting-rights-act-cvra-sought-to-broaden-representation-in-largely-white-controlled-city-councils-state-wide-by-incentivizing-cities-to-shift-council-electoral-jurisdictions-from-at-large-to-single-member-districts.-however-little-research-has-investigated-the-success-orfailure-of-the-cvra-and-legal-battles-continue-over-the-implementation-of-the-cvra.-this-paperemploys-causal-inference-methods-matching-and-difference-in-difference-to-determine-if-the-cvrahas-actually-led-to-city-council-diversification.-by-comparing-the-racial-composition-of-city-councilsbefore-and-after-fully-switching-from-at-large-to-district-election-jurisdictions-we-estimate-the-average-treatment-effect-ate-of-city-switching-on-minority-city-council-representation-at-13-14.-further-analysis-reveals-treatment-effects-are-larger-among-cities-with-larger-shares-of-latinos-29-32.thus-states-seeking-to-increase-local-level-minority-representation-should-consider-policies-similar-tothose-found-in-the-california-voting-rights-act." class="section level4">
+<h4>The passage of the California Voting Rights Act (CVRA) sought to broaden representation in largely white-controlled city councils state-wide by incentivizing cities to shift council electoral jurisdictions from at-large to single-member districts. However, little research has investigated the success orfailure of the CVRA, and legal battles continue over the implementation of the CVRA. This paperemploys causal inference methods (matching and difference-in-difference) to determine if the CVRAhas actually led to city council diversification. By comparing the racial composition of city councilsbefore and after fully switching from at-large to district election jurisdictions, we estimate the average treatment effect (ATE) of city switching on minority city council representation at 13-14%. Further analysis reveals treatment effects are larger among cities with larger shares of Latinos (29-32%).Thus, states seeking to increase local-level minority representation should consider policies similar tothose found in the California Voting Rights Act.</h4>
+</div>
+<div id="this-project-is-being-completed-alongside-dr.loren-collingwood" class="section level4">
+<h4>This project is being completed alongside <a href="https://www.collingwoodresearch.com/">Dr. Loren Collingwood</a></h4>
+</div>
+</div>
+<div id="section-4" class="section level1">
+<h1></h1>
+</div>
+<div id="section-5" class="section level1">
+<h1></h1>
+</div>
+<div id="section-6" class="section level1">
+<h1></h1>
+<center>
+<div id="how-the-2016-election-made-extremist-discourse-mainstream" class="section level4">
+<h4><i> How the 2016 Election Made Extremist Discourse Mainstream </i></h4>
+</div>
+<div id="working-paper" class="section level4">
+<h4>Working Paper</h4>
+</div>
+<div id="the-2016-election-brought-names-like-richard-spencer-and-steve-bannon-into-the-mainstream-and-focused-attention-on-the-rise-of-the-so-called-alt-right.-while-popular-media-has-decried-the-growth-of-right-wing-news-outlets-like-breitbart-news-little-sustained-academic-research-has-examined-the-spread-of-alt-right-ideas-or-their-apparent-influence-over-modern-conservative-discourse.-this-project-uses-a-combination-of-text-based-machine-learning-techniques-to-develop-models-of-media-trends-for-both-extremist-and-more-mainstream-conservative-news-organizations.-by-scraping-thousands-of-blog-posts-from-the-white-supremacist-daily-stormer-and-conservative-news-outlet-breitbart-news-we-show-how-the-2016-election-created-the-opportunity-for-white-supremacist-rhetoric-to-begin-to-influence-mainstream-conservative-discourse.-our-findings-demonstrate-that-extremist-ideas-significantly-shaped-and-influenced-conservative-news-during-and-after-the-2016-election.-this-project-emphasizes-the-salient-nature-of-right-wing-extremism-in-modern-american-political-discourse." class="section level4">
+<h4>The 2016 election brought names like Richard Spencer and Steve Bannon into the mainstream and focused attention on the rise of the so-called ``alt-right’’. While popular media has decried the growth of right-wing news outlets like Breitbart News, little sustained academic research has examined the spread of alt-right ideas or their apparent influence over modern conservative discourse. This project uses a combination of text-based machine learning techniques to develop models of media trends for both extremist and more mainstream conservative news organizations. By scraping thousands of blog posts from the white supremacist Daily Stormer, and conservative news outlet Breitbart News, we show how the 2016 election created the opportunity for white supremacist rhetoric to begin to influence mainstream conservative discourse. Our findings demonstrate that extremist ideas significantly shaped and influenced conservative news during and after the 2016 election. This project emphasizes the salient nature of right-wing extremism in modern American political discourse.</h4>
+</div>
+<div id="this-project-is-being-completed-alongside-dr.loren-collingwood-1" class="section level4">
+<h4>This project is being completed alongside <a href="https://www.collingwoodresearch.com/">Dr. Loren Collingwood</a></h4>
+</div>
+</div>
+<div id="section-7" class="section level1">
+<h1></h1>
+</div>
+<div id="section-8" class="section level1">
+<h1></h1>
+</div>
+<div id="section-9" class="section level1">
+<h1></h1>
+<center>
+<div id="women-and-political-ambition-running-for-us-or-running-for-me" class="section level4">
+<h4><i> Women and Political Ambition: Running for Us or Running for Me? </i></h4>
+</div>
+<div id="working-paper-1" class="section level4">
+<h4>Working Paper</h4>
+</div>
+<div id="the-year-2018-has-been-dubbed-the-year-of-the-woman-because-of-the-increased-number-of-women-not-only-running-for-office-but-also-winning.-for-the-first-time-in-u.s.-history-over-100-women-are-in-the-u.s.-house-with-32-being-newly-elected.-the-freshmen-class-is-also-among-the-most-diverse-in-u.s.-history.-while-the-national-level-has-received-the-lions-share-of-attention-in-the-media-similar-trends-have-been-happening-at-the-state-and-local-level.-what-helps-to-account-for-this-dramatic-increase" class="section level4">
+<h4>The year 2018 has been dubbed the year of the woman because of the increased number of women not only running for office, but also winning. For the first time in U.S. history, over 100 women are in the U.S. House, with 32 being newly elected. The freshmen class is also among the most diverse in U.S. history. While the national level has received the lion’s share of attention in the media, similar trends have been happening at the state and local level. What helps to account for this dramatic increase?</h4>
+</div>
+<div id="this-project-is-being-completed-alongside-the-ucr-gender-lab" class="section level4">
+<h4>This project is being completed alongside the <a href="https://ucr-gender-lab.github.io/projects.html">UCR Gender Lab</a></h4>
+</div>
+</div>
+<div id="section-10" class="section level1">
+<h1></h1>
+</div>
+<div id="section-11" class="section level1">
+<h1></h1>
+</div>
+<div id="section-12" class="section level1">
+<h1></h1>
+</div>
+<div id="section-13" class="section level1">
+<h1></h1>
+</div>
+<div id="section-14" class="section level1">
+<h1></h1>
+</div>
+<div id="section-15" class="section level1">
+<h1></h1>
+</center>
+</div>
+<div id="section-16" class="section level1">
+<h1></h1>
+</div>
+<div id="section-17" class="section level1">
+<h1></h1>
+</div>
+<div id="section-18" class="section level1">
+<h1></h1>
+</div>
+<div id="section-19" class="section level1">
+<h1></h1>
+</div>
+<div id="section-20" class="section level1">
+<h1></h1>
+</div>
+<div id="section-21" class="section level1">
+<h1></h1>
+</div>
+<div id="section-22" class="section level1">
+<h1></h1>
+</div>
+<div id="section-23" class="section level1">
+<h1></h1>
+</div>
+<div id="section-24" class="section level1">
+<h1></h1>
+</div>
+<div id="section-25" class="section level1">
+<h1></h1>
+</div>
+<div id="section-26" class="section level1">
+<h1></h1>
+</div>
+<div id="section-27" class="section level1">
+<h1></h1>
+</div>
+<div id="section-28" class="section level1">
+<h1></h1>
+</div>
+<div id="section-29" class="section level1">
+<h1></h1>
+</div>
+<div id="section-30" class="section level1">
+<h1></h1>
+</div>
+<div id="section-31" class="section level1">
+<h1></h1>
+</div>
+<div id="section-32" class="section level1">
+<h1></h1>
+</div>
+<div id="section-33" class="section level1">
+<h1></h1>
+</div>
+<div id="section-34" class="section level1">
+<h1></h1>
+</div>
+<div id="section-35" class="section level1">
+<h1></h1>
+</div>
+<div id="section-36" class="section level1">
+<h1></h1>
+</div>
+<div id="section-37" class="section level1">
+<h1></h1>
+</div>
+<div id="section-38" class="section level1">
+<h1></h1>
+</div>
+<div id="section-39" class="section level1">
+<h1></h1>
+</div>
+<div id="section-40" class="section level1">
+<h1></h1>
+</div>
+<div id="section-41" class="section level1">
+<h1></h1>
+</div>
+<div id="section-42" class="section level1">
+<h1></h1>
+</div>
+<div id="section-43" class="section level1">
+<h1></h1>
+</div>
+<div id="section-44" class="section level1">
+<h1></h1>
+</div>
+<div id="section-45" class="section level1">
+<h1></h1>
+</div>
+<div id="section-46" class="section level1">
+<h1></h1>
+</div>
+<div id="section-47" class="section level1">
+<h1></h1>
+</div>
+<div id="section-48" class="section level1">
+<h1></h1>
+</div>
+<div id="section-49" class="section level1">
+<h1></h1>
+</div>
+<div id="section-50" class="section level1">
+<h1></h1>
+</div>
+<div id="section-51" class="section level1">
+<h1></h1>
+</div>
+<div id="section-52" class="section level1">
+<h1></h1>
+</div>
+<div id="section-53" class="section level1">
+<h1></h1>
+</div>
+<div id="section-54" class="section level1">
+<h1></h1>
+</div>
+<div id="section-55" class="section level1">
+<h1></h1>
+</div>
+<div id="section-56" class="section level1">
+<h1></h1>
+</div>
+<div id="section-57" class="section level1">
+<h1></h1>
+</div>
+<div id="section-58" class="section level1">
+<h1></h1>
+</div>
+<div id="section-59" class="section level1">
+<h1></h1>
+</div>
+<div id="section-60" class="section level1">
+<h1></h1>
+</div>
+<div id="section-61" class="section level1">
+<h1></h1>
+</div>
+<div id="section-62" class="section level1">
+<h1></h1>
+</div>
+<div id="section-63" class="section level1">
+<h1></h1>
+</div>
+<div id="section-64" class="section level1">
+<h1></h1>
+</div>
+<div id="section-65" class="section level1">
+<h1></h1>
+</div>
+<div id="section-66" class="section level1">
+<h1></h1>
+</div>
+<div id="section-67" class="section level1">
+<h1></h1>
+</div>
+<div id="section-68" class="section level1">
+<h1></h1>
+</div>
+<div id="section-69" class="section level1">
+<h1></h1>
+</div>
+<div id="section-70" class="section level1">
+<h1></h1>
+</div>
+<div id="section-71" class="section level1">
+<h1></h1>
+<center>
+<p>This website was created and is maintained by Sean Long</p>
+</center>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
