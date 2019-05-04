@@ -4,7 +4,7 @@ navbar:
   title: "Sean D. Long"
   left:
     - text: "Home"
-      href: home.html
+      href: index.html
     - text: "Research"
       href: research.html
       icon: fa-users fa-lg
