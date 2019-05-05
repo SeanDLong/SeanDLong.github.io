@@ -9,10 +9,10 @@ navbar:
       href: research.html
       icon: fa-users fa-lg
     - text: "Affiliations"
-      icon: fa-female fa-lg
+      icon: fa-male fa-lg
       href: affiliations.html
     - text: "Contact"
-      icon: fa-female fa-lg
+      icon: fa-male fa-lg
       href: contact.html
 
   right:
