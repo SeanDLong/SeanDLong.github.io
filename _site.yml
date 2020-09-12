@@ -6,8 +6,11 @@ navbar:
     - text: "Home"
       href: index.html
       icon: fa-home fa-lg
-    - text: "Research"
+    - text: "Current Research"
       href: research.html
+      icon: fa-book fa-lg
+    - text: "Publications"
+      href: publications.html
       icon: fa-book fa-lg
     - text: "CV"
       href: images/Full_CV.pdf

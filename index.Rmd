@@ -14,7 +14,7 @@
 
 ###
 
-### My name is Sean Long. I am a fourth year PhD student with the [UC Riverside Political Science Department](https://politicalscience.ucr.edu/)
+### Hello! My name is Sean Long. I am a fourth year PhD student with the [UC Riverside Political Science Department](https://politicalscience.ucr.edu/)
 
 ###
 
@@ -87,5 +87,5 @@
 
 
 <center>
-This website was created and is maintained by Sean Long
+This website was created and is maintained in R by Sean Long
 </center>
