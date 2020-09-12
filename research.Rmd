@@ -73,9 +73,12 @@
 #
 
 
-</center>
+<center>
 
-
+#### <i> Emotional Engagement in the Year of the Woman </i>
+#### Working Paper
+#### Women, especially Democratic women, have become more deeply engaged in politics since the 2016 election. It is not entirely clear what role, if any, the political environment has played in shaping this increased political engagement, or what mechanisms are underlying it. We argue that gendered features of the political environment from 2016 and beyond influenced emotional reactions to politics, but in distinct ways and more strongly for Democratic women, and these in turn led to increased engagement. We test our arguments using experimental designs in which participants were randomly assigned to read vignettes about Trump’s treatment of women, Clinton’s historic run for office, the Women’s Marches, or the #MeToo movement. We find that reading about Trump’s treatment of women led to higher anger, especially among Democratic women, while reading about Clinton’s run for office instead increased enthusiasm among highly educated women, and these elevated emotions increased intended future engagement. 
+#### This project is being completed alongside the [UCR Gender Lab](https://ucr-gender-lab.github.io/projects.html)
 
 #
 
