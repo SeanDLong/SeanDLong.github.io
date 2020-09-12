@@ -41,6 +41,8 @@
 
 #
 
+
+#
 <center>
 
 #### <i> Implicit and Explicit White Identity Cues </i>
@@ -50,6 +52,9 @@
 
 #
 
+#
+
+#
 
 <center>
 
@@ -59,6 +64,11 @@
 #### This project is being completed alongside [Dr. Ashley Jardina](https://sites.duke.edu/ashleyjardina/) and [Dr. Loren Collingwood](https://www.collingwoodresearch.com/)
 
 #
+
+#
+
+#
+
 <center>
 
 #### <i> Women and Political Ambition: Running for Us or Running for Me? </i>
