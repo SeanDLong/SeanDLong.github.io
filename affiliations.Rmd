@@ -15,31 +15,10 @@
 
 #
 
-#
-
-#
-
-#
-
-#
-
-<center>
-
-#### <i> Center for Social Innovation </i>
-#### I am currently working as a graduate student researcher with the [Center for Social Innovation](https://socialinnovation.ucr.edu/), where I am responsible for collecting and analyzing data on voting behavior in the Inland Empire. This involves data wrangling, spatial mapping, and other programming-based skills.
-<center>
-<img src="images/CSI.png" style="width:50%; border:10px solid; margin-right: 20px" align="middle">
-</center>
-#
-
-#
-
-#
-
 <center>
 
 #### <i> UC Riverside Gender Lab </i>
-#### I am also involved with [Dr. Jennifer Merolla's](https://jennifermerollaphd.wordpress.com/) gender lab, where I work together with a group of scholars dedicated to studying the role of women in the political system and issues facing women candidates.
+#### I am currently working with [Dr. Jennifer Merolla's](https://jennifermerollaphd.wordpress.com/) gender lab, where I work together with a group of scholars dedicated to studying the role of women in the political system and issues facing women candidates.
 
 #
 

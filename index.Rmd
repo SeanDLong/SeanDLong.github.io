@@ -14,7 +14,7 @@
 
 ###
 
-### My name is Sean Long. I am a second year PhD student with the [UC Riverside Political Science Department](https://politicalscience.ucr.edu/)
+### My name is Sean Long. I am a fourth year PhD student with the [UC Riverside Political Science Department](https://politicalscience.ucr.edu/)
 
 ###
 
@@ -49,7 +49,7 @@
 ###
 
 
-#### I am primarily interested in quantitative research on questions of political behavior and communication in the United States. Specifically, I work on projects devoted to understanding political extremism, social identity, and the role of the media in American politics. Primarily using R, I focus on methods leveraging text data and other observation data for causal inference.
+#### I am primarily interested in quantitative research on questions of political behavior and communication in the United States. Specifically, I work on projects devoted to understanding political extremism, social identity, and the role of the media in American politics. Primarily using R, I focus on methods leveraging text data and other observational data for causal inference.
 #### Check out more [details on my ongoing projects.](https://seandlong.github.io/research)
 
 

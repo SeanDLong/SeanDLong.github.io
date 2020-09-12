@@ -20,9 +20,10 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
-<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -31,10 +32,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -69,9 +72,7 @@ h6 {
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -90,8 +91,14 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -107,7 +114,6 @@ body {
   padding-top: 69px;
   margin-top: -69px;
 }
-
 .section h2 {
   padding-top: 69px;
   margin-top: -69px;
@@ -127,6 +133,43 @@ body {
 .section h6 {
   padding-top: 69px;
   margin-top: -69px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -148,19 +191,85 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -181,25 +290,13 @@ $(document).ready(function () {
   <a href="index.html">Home</a>
 </li>
 <li>
-  <a href="research.html">
-    <span class="fa fa-users fa-lg"></span>
-     
-    Research
-  </a>
+  <a href="research.html">Research</a>
 </li>
 <li>
-  <a href="affiliations.html">
-    <span class="fa fa-female fa-lg"></span>
-     
-    Affiliations
-  </a>
+  <a href="affiliations.html">Affiliations</a>
 </li>
 <li>
-  <a href="contact.html">
-    <span class="fa fa-female fa-lg"></span>
-     
-    Contact
-  </a>
+  <a href="contact.html">Contact</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -234,6 +331,13 @@ $(document).ready(function () {
 </div>
 <div id="section-2" class="section level1">
 <h1></h1>
+<center>
+<div id="uc-riverside-gender-lab" class="section level4">
+<h4><i> UC Riverside Gender Lab </i></h4>
+</div>
+<div id="i-am-currently-working-with-dr.jennifer-merollas-gender-lab-where-i-work-together-with-a-group-of-scholars-dedicated-to-studying-the-role-of-women-in-the-political-system-and-issues-facing-women-candidates." class="section level4">
+<h4>I am currently working with <a href="https://jennifermerollaphd.wordpress.com/">Dr. Jennifer Merolla’s</a> gender lab, where I work together with a group of scholars dedicated to studying the role of women in the political system and issues facing women candidates.</h4>
+</div>
 </div>
 <div id="section-3" class="section level1">
 <h1></h1>
@@ -243,18 +347,19 @@ $(document).ready(function () {
 </div>
 <div id="section-5" class="section level1">
 <h1></h1>
+<center>
+<div id="professional-colleagues" class="section level4">
+<h4><i> Professional Colleagues </i></h4>
+</div>
+<div id="because-no-scholar-works-alone-i-am-also-indebted-to-my-colleagues-with-the-ucr-political-science-department" class="section level4">
+<h4>Because no scholar works alone, I am also indebted to my colleagues with the <a href="https://politicalscience.ucr.edu/">UCR Political Science Department</a></h4>
+</div>
 </div>
 <div id="section-6" class="section level1">
 <h1></h1>
 <center>
-<div id="center-for-social-innovation" class="section level4">
-<h4><i> Center for Social Innovation </i></h4>
-</div>
-<div id="i-am-currently-working-as-a-graduate-student-researcher-with-the-center-for-social-innovation-where-i-am-responsible-for-collecting-and-analyzing-data-on-voting-behavior-in-the-inland-empire.-this-involves-data-wrangling-spatial-mapping-and-other-programming-based-skills." class="section level4">
-<h4>I am currently working as a graduate student researcher with the <a href="https://socialinnovation.ucr.edu/">Center for Social Innovation</a>, where I am responsible for collecting and analyzing data on voting behavior in the Inland Empire. This involves data wrangling, spatial mapping, and other programming-based skills.</h4>
-<center>
-<img src="images/CSI.png" style="width:50%; border:10px solid; margin-right: 20px" align="middle">
-</center>
+<div id="this-includes-my-advisor-dr.loren-collingwood-and-my-fellow-student-stephanie-demora" class="section level4">
+<h4>This includes my advisor, <a href="https://www.collingwoodresearch.com/">Dr. Loren Collingwood</a> and my fellow student <a href="https://www.stephaniedemora.com/">Stephanie DeMora</a></h4>
 </div>
 </div>
 <div id="section-7" class="section level1">
@@ -262,16 +367,10 @@ $(document).ready(function () {
 </div>
 <div id="section-8" class="section level1">
 <h1></h1>
+</center>
 </div>
 <div id="section-9" class="section level1">
 <h1></h1>
-<center>
-<div id="uc-riverside-gender-lab" class="section level4">
-<h4><i> UC Riverside Gender Lab </i></h4>
-</div>
-<div id="i-am-also-involved-with-dr.jennifer-merollas-gender-lab-where-i-work-together-with-a-group-of-scholars-dedicated-to-studying-the-role-of-women-in-the-political-system-and-issues-facing-women-candidates." class="section level4">
-<h4>I am also involved with <a href="https://jennifermerollaphd.wordpress.com/">Dr. Jennifer Merolla’s</a> gender lab, where I work together with a group of scholars dedicated to studying the role of women in the political system and issues facing women candidates.</h4>
-</div>
 </div>
 <div id="section-10" class="section level1">
 <h1></h1>
@@ -281,27 +380,15 @@ $(document).ready(function () {
 </div>
 <div id="section-12" class="section level1">
 <h1></h1>
-<center>
-<div id="professional-colleagues" class="section level4">
-<h4><i> Professional Colleagues </i></h4>
-</div>
-<div id="because-no-scholar-works-alone-i-am-also-indebted-to-my-colleagues-with-the-ucr-political-science-department" class="section level4">
-<h4>Because no scholar works alone, I am also indebted to my colleagues with the <a href="https://politicalscience.ucr.edu/">UCR Political Science Department</a></h4>
-</div>
 </div>
 <div id="section-13" class="section level1">
 <h1></h1>
-<center>
-<div id="this-includes-my-advisor-dr.loren-collingwood-and-my-fellow-student-stephanie-demora" class="section level4">
-<h4>This includes my advisor, <a href="https://www.collingwoodresearch.com/">Dr. Loren Collingwood</a> and my fellow student <a href="https://www.stephaniedemora.com/">Stephanie DeMora</a></h4>
-</div>
 </div>
 <div id="section-14" class="section level1">
 <h1></h1>
 </div>
 <div id="section-15" class="section level1">
 <h1></h1>
-</center>
 </div>
 <div id="section-16" class="section level1">
 <h1></h1>
@@ -448,27 +535,6 @@ $(document).ready(function () {
 <h1></h1>
 </div>
 <div id="section-64" class="section level1">
-<h1></h1>
-</div>
-<div id="section-65" class="section level1">
-<h1></h1>
-</div>
-<div id="section-66" class="section level1">
-<h1></h1>
-</div>
-<div id="section-67" class="section level1">
-<h1></h1>
-</div>
-<div id="section-68" class="section level1">
-<h1></h1>
-</div>
-<div id="section-69" class="section level1">
-<h1></h1>
-</div>
-<div id="section-70" class="section level1">
-<h1></h1>
-</div>
-<div id="section-71" class="section level1">
 <h1></h1>
 <center>
 <p>This website was created and is maintained by Sean Long</p>
