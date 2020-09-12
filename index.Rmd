@@ -55,7 +55,7 @@
 ####
 
 #### Check out more [details on my ongoing projects.](https://seandlong.github.io/research)
-#### Details on my background: [Curriculum vitae] (https://seandlong.github.io/cv)
+#### Details on my background: [Curriculum vitae](https://seandlong.github.io/cv)
 
 
 ####
