@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="styles.css" type="text/css">
 
 <center>
-<img src="images/cathedralpeak.jpg" style="width:50%; border:10px solid; margin-right: 20px" align="middle">
+<img src="images/Joshua.jpg" style="width:50%; border:10px solid; margin-right: 20px" align="middle">
 </center>
 
 #
@@ -18,63 +18,30 @@
 #
 
 <center>
-#### <i> White Identity, Violence, and the 2016 Election </i>
-#### Working Paper
-#### This paper seeks to examine the relationship between Donald Trump's 2016 election, the alt-right, and white identity. Specifically, it seeks to understand why white extremists broke with long-held precedent against supporting major politicians post-Civil Rights. This paper will explore how Trump's candidacy mobilized members of the white extremist alt-right to engage further with mainstream politics. This will be shown through the use of interrupted time series analyses on blog texts from the prominent \textit{Daily Stormer}, using unsupervised learning to discerm topic selection from that text. Then, I will perform both an OLS regression and a mediation analysis on 2018 ANES Pilot data to explore how white identity influences support for the alt-right, which in turn predicts positive evaluations of Donald Trump. Overall, this paper shows how the salience of white identity mobilized extremist groups to engage in more mainstream political action, including overt support for Trump and efforts to appear more mainstream in tone.
 
-#### This project is currently being expanded into my dissertation.
+#### **Areas of Focus**
+
+</center>
+
+#### **Political Violence and White Identity**
+#### My primary research and my dissertation are focused on understanding the politics surrounding White violence in the United States. This research looks both at what motivates "mainstream" Whites to endorse forms of political violence, as well as the factors that lead White extremists to commit acts of hate or to participate in forms of electoral politics. I am also interested in understanding how Whites evaluate political parties and the police according to the extent to which these institutions advance perceived White interests.
+#### An initial exerpt of my dissertation relating to alt-right mobilization during the 2016 election is forthcoming in Politics, Groups, and Identity. In addition to dissertation-related research, I am currently studying the impact of White racial cues with [Dr. Charles Crabtree](http://charlescrabtree.com/) and the politics surrounding firearm and militia culture with Drs. [Ashley Jardina](https://sites.duke.edu/ashleyjardina/) and [Loren Collingwood](https://www.collingwoodresearch.com/).
+#### 
+#### 
+#### **Local Politics and Voting Rights**
+#### The passage of the California Voting Rights Act (CVRA) sought to broaden representation in largely white-controlled city councils throughout California. Despite being passed in 2001, the CVRA has only recently seen an escalation in meaningful enforcement, and my research has focused on whether the enforcement of this act has been successful. This initial investigation has led me to study larger questions concerning voting rights enforcement, such as looking at how the CVRA disparately impacts different racial minorities and how district creation can shape electoral outcomes.
+#### This research has been published in the journal Urban Affairs and overlaps considerably with my work for [Collingwood Research](https://www.collingwoodresearch.com/).
+#### 
+#### 
+#### **Computational Statistics and Data Science**
+#### While I am passionate about my substantive interests, much of my academic focus has been on learning methodology and programming skills. Using my experience with R, I have turned towards studying novel methods such as machine learning, text modelling, and geospatial analysis. These efforts help towards the use of novel and open-source datasets which is necessary to answer unconventional questions. For instance, my work studying extremist discourse has made extensive use of text analysis, while my work on the politics surround gun stores involves the creation of a novel dataset of locational data.
 #
 
 #
 
 #
 
-<center>
-#### <i> How the 2016 election hardened conservative discourse on immigration </i>
-#### Working Paper
-#### There has been a recent increase in scholarly attention to the racialization of American public opinion and the role of fragmentation in media studies. This paper seeks to track how Donald Trump's campaign for president in 2015 and 2016 impacted right-wing media discourse over immigration. Specifically, we show that support for Trump by various media outlets consistently accompanied increasingly hostile narratives surrounding immigration. This effect proved to hold across the right-wing spectrum, including both mainstream and extreme news sources. We use a combination of text-based machine learning techniques to develop models of media trends for both extremist and more mainstream conservative news organizations. By collecting thousands of blog posts and news articles from the white supremacist Daily Stormer, and conservative news outlets Breitbart News and Fox News we were able to show that the Trump campaign essentially united previously fragmented media sources around similar anti-immigrant frames.
 
-#### This project is being completed alongside [Dr. Loren Collingwood](https://www.collingwoodresearch.com/)
-
-
-#
-
-#
-
-
-#
-<center>
-
-#### <i> Implicit and Explicit White Identity Cues </i>
-#### Working Paper
-#### Recent research has found that, despite a long-standing inclination for politicians to use implicit rather than explicit racial cues, explicit cues are becoming increasingly common in political discourse. Combined with the increased salience of white identity in American politicis, this project explores whether White voters are receptive to implicit or explicit appeals to threats to white identity and explores the connection between such appeals and White attitudes towards violence and immigration. 
-#### This project is being completed alongside [Dr. Charles Crabtree](http://charlescrabtree.com/)
-
-#
-
-#
-
-#
-
-<center>
-
-#### <i> Tactical Gun Stores, White Identity, and Race in America </i>
-#### Working Paper
-#### With the rise of White violence and armed militia groups in contemporary American politics, this project attempts to understand the cultural role of tactical gun stores, i.e. gun stores that focus on the sale of tactical weapons and other gear. Using novel data collection from Google Maps API to identify the locations of different types of gun stores, we hope to further understand what this heavily militarized aspect of gun culture tells us about contemporary White violence.
-#### This project is being completed alongside [Dr. Ashley Jardina](https://sites.duke.edu/ashleyjardina/) and [Dr. Loren Collingwood](https://www.collingwoodresearch.com/)
-
-#
-
-#
-
-#
-
-<center>
-
-#### <i> Women and Political Ambition: Running for Us or Running for Me? </i>
-#### Working Paper
-#### The year 2018 has been dubbed the year of the woman because of the increased number of women not only running for office, but also winning. For the first time in U.S. history, over 100 women are in the U.S. House, with 32 being newly elected. The freshmen class is also among the most diverse in U.S. history. While the national level has received the lion’s share of attention in the media, similar trends have been happening at the state and local level.  What helps to account for this dramatic increase?
-#### This project is being completed alongside the [UCR Gender Lab](https://ucr-gender-lab.github.io/projects.html)
 
 #
 
@@ -191,6 +158,6 @@
 
 <center> 
 
-This website was created and is maintained in R by Sean Long
+This website was created and is maintained by Sean Long
 
 </center>

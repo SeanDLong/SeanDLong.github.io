@@ -13,24 +13,37 @@
 
 <title></title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
-<style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -43,32 +56,7 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
@@ -79,10 +67,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -99,40 +83,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 64px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h2 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h3 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h4 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h5 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h6 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -160,7 +117,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -172,7 +129,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -183,10 +140,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -198,7 +168,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -322,7 +291,7 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -331,6 +300,7 @@ $(document).ready(function () {
 
 
 <p><link rel="stylesheet" href="styles.css" type="text/css"></p>
+<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 <center>
 <img src="images/Joshua.jpg" style="width:50%; border:10px solid; margin-right: 20px" align="middle">
 </center>
@@ -339,29 +309,24 @@ $(document).ready(function () {
 </div>
 <div id="section-1" class="section level1">
 <h1></h1>
-<center>
-<div id="emotional-engagement-in-the-year-of-the-woman" class="section level4">
-<h4><i> Emotional Engagement in the Year of the Woman </i></h4>
+<div id="white-identity-donald-trump-and-the-mobilization-of-extremism" class="section level4">
+<h4><i> White Identity, Donald Trump, and the Mobilization of Extremism </i></h4>
 </div>
-<div id="submitted-to-american-political-science-review" class="section level4">
-<h4>Submitted to American Political Science Review</h4>
+<div id="forthcoming-in-politics-groups-and-identity" class="section level4">
+<h4>Forthcoming in Politics, Groups, and Identity</h4>
 </div>
-<div id="women-especially-democratic-women-have-become-more-deeply-engaged-in-politics-since-the-2016-election.-it-is-not-entirely-clear-what-role-if-any-the-political-environment-has-played-in-shaping-this-increased-political-engagement-or-what-mechanisms-are-underlying-it.-we-argue-that-gendered-features-of-the-political-environment-from-2016-and-beyond-influenced-emotional-reactions-to-politics-but-in-distinct-ways-and-more-strongly-for-democratic-women-and-these-in-turn-led-to-increased-engagement.-we-test-our-arguments-using-experimental-designs-in-which-participants-were-randomly-assigned-to-read-vignettes-about-trumps-treatment-of-women-clintons-historic-run-for-office-the-womens-marches-or-the-metoo-movement.-we-find-that-reading-about-trumps-treatment-of-women-led-to-higher-anger-especially-among-democratic-women-while-reading-about-clintons-run-for-office-instead-increased-enthusiasm-among-highly-educated-women-and-these-elevated-emotions-increased-intended-future-engagement." class="section level4">
-<h4>Women, especially Democratic women, have become more deeply engaged in politics since the 2016 election. It is not entirely clear what role, if any, the political environment has played in shaping this increased political engagement, or what mechanisms are underlying it. We argue that gendered features of the political environment from 2016 and beyond influenced emotional reactions to politics, but in distinct ways and more strongly for Democratic women, and these in turn led to increased engagement. We test our arguments using experimental designs in which participants were randomly assigned to read vignettes about Trump’s treatment of women, Clinton’s historic run for office, the Women’s Marches, or the #MeToo movement. We find that reading about Trump’s treatment of women led to higher anger, especially among Democratic women, while reading about Clinton’s run for office instead increased enthusiasm among highly educated women, and these elevated emotions increased intended future engagement.</h4>
+<div id="this-paper-seeks-to-examine-the-relationship-between-extremist-mobilization-and-elite-cues.-specifi-cally-i-explore-how-political-elites-can-mobilize-fringe-extremists-by-looking-at-a-specific-examplewhere-trumps-2016-candidacy-mobilized-members-of-the-white-extremist-alt-right-by-appealing-totheir-sense-of-white-in-group-identification.-it-will-first-be-shown-how-the-alt-right-was-responsive-totrumps-rhetoric-by-performing-interrupted-time-series-analyses-on-blog-texts-from-the-prominentextremistdaily-stormer.-then-i-will-incorporate-results-from-a-survey-experiment-showing-howwhite-identity-motivates-those-high-in-alt-right-sentiment-to-support-candidates-who-use-racializedand-white-identity-related-rhetoric.-finally-i-connect-these-observations-using-data-from-the-2016anes-pilot-to-show-how-white-identity-uniquely-motivated-primary-era-support-for-trump-showinghow-trump-was-distinct-in-his-appeal-to-those-high-in-white-identity.-across-these-last-three-analysesi-also-show-how-out-group-animus-in-the-form-of-racial-resentment-consistently-fails-to-predict-theunique-support-that-trump-received-from-the-alt-right.-overall-this-paper-shows-how-white-identitycan-result-in-white-extremist-support-for-a-mainstream-political-candidate." class="section level4">
+<h4>This paper seeks to examine the relationship between extremist mobilization and elite cues. Specifi-cally, I explore how political elites can mobilize fringe extremists by looking at a specific examplewhere Trump’s 2016 candidacy mobilized members of the White extremist alt-right by appealing totheir sense of White in-group identification. It will first be shown how the alt-right was responsive toTrump’s rhetoric by performing interrupted time series analyses on blog texts from the prominentextremistDaily Stormer. Then, I will incorporate results from a survey experiment showing howWhite identity motivates those high in alt-right sentiment to support candidates who use racializedand White identity-related rhetoric. Finally, I connect these observations using data from the 2016ANES pilot to show how White identity uniquely motivated primary-era support for Trump, showinghow Trump was distinct in his appeal to those high in White identity. Across these last three analyses,I also show how out-group animus in the form of racial resentment consistently fails to predict theunique support that Trump received from the alt-right. Overall, this paper shows how White identitycan result in White extremist support for a mainstream political candidate.</h4>
 </div>
-<div id="this-project-was-completed-alongside-the-ucr-gender-lab" class="section level4">
-<h4>This project was completed alongside the <a href="https://ucr-gender-lab.github.io/projects.html">UCR Gender Lab</a></h4>
+<div id="section-2" class="section level4">
+<h4></h4>
 </div>
+<div id="section-3" class="section level4">
+<h4></h4>
 </div>
-<div id="section-2" class="section level1">
-<h1></h1>
+<div id="section-4" class="section level4">
+<h4></h4>
 </div>
-<div id="section-3" class="section level1">
-<h1></h1>
-</div>
-<div id="section-4" class="section level1">
-<h1></h1>
-<center>
 <div id="can-states-promote-minority-representation-assessing-the-effects-of-the-california-voting-rights-act" class="section level4">
 <h4><i> Can States Promote Minority Representation? Assessing the Effects of the California Voting Rights Act </i></h4>
 </div>
@@ -374,16 +339,15 @@ $(document).ready(function () {
 <div id="this-project-was-completed-alongside-dr.-loren-collingwood" class="section level4">
 <h4>This project was completed alongside <a href="https://www.collingwoodresearch.com/">Dr. Loren Collingwood</a></h4>
 </div>
+<div id="section-5" class="section level4">
+<h4></h4>
 </div>
-<div id="section-5" class="section level1">
-<h1></h1>
+<div id="section-6" class="section level4">
+<h4></h4>
 </div>
-<div id="section-6" class="section level1">
-<h1></h1>
+<div id="section-7" class="section level4">
+<h4></h4>
 </div>
-<div id="section-7" class="section level1">
-<h1></h1>
-<center>
 <div id="demographic-change-white-decline-and-the-changing-nature-of-racial-politics-in-election-campaigns" class="section level4">
 <h4><i> Demographic Change, White Decline, and the Changing Nature of Racial Politics in Election Campaigns </i></h4>
 </div>
@@ -393,8 +357,8 @@ $(document).ready(function () {
 <div id="the-role-that-race-and-racism-plays-in-american-elections-and-politics-cannot-be-understated.-as-the-nation-diversifies-and-moves-towards-majority-minority-status-by-mid-century-the-two-major-political-parties-are-further-polarizing-on-issues-of-racial-inclusion-racial-policy-and-racial-appeals-in-electoral-campaigns.-each-year-the-electorate-becomes-a-bit-less-white-meaning-that-candidates-of-color-are-more-likely-to-run-and-win-and-that-white-candidates-appeal-more-specifically-to-various-communities-of-color.-this-chapter-examines-the-extant-literature-on-race-and-political-psychology-in-an-effort-to-highlight-the-continuing-political-significance-of-race-and-ethnicity-given-long-term-demographic-change.-additionally-we-show-that-appeals-to-race-and-racism-continue-to-play-a-key-role-in-american-democracy." class="section level4">
 <h4>The role that race and racism plays in American elections and politics cannot be understated. As the nation diversifies and moves towards majority-minority status by mid-century, the two major political parties are further polarizing on issues of racial inclusion, racial policy, and racial appeals in electoral campaigns. Each year, the electorate becomes a bit less White, meaning that candidates of color are more likely to run and win, and that White candidates appeal more specifically to various communities of color. This chapter examines the extant literature on race and political psychology, in an effort to highlight the continuing political significance of race and ethnicity given long term demographic change. Additionally, we show that appeals to race and racism continue to play a key role in American democracy.</h4>
 </div>
-<div id="this-project-was-completed-alongside-dr.-loren-collingwood-and-stephanie-demora-httpwww.stephaniedemora.com" class="section level4">
-<h4>This project was completed alongside <a href="https://www.collingwoodresearch.com/">Dr. Loren Collingwood</a> and [Stephanie DeMora] (<a href="http://www.stephaniedemora.com/" class="uri">http://www.stephaniedemora.com/</a>)</h4>
+<div id="this-project-was-completed-alongside-dr.-loren-collingwood-and-stephanie-demora" class="section level4">
+<h4>This project was completed alongside <a href="https://www.collingwoodresearch.com/">Dr. Loren Collingwood</a> and <a href="http://www.stephaniedemora.com/">Stephanie DeMora</a></h4>
 </div>
 </div>
 <div id="section-8" class="section level1">
@@ -602,7 +566,7 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -620,7 +584,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>

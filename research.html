@@ -13,24 +13,37 @@
 
 <title></title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
-<style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -43,32 +56,7 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
@@ -79,10 +67,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -99,40 +83,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 64px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h2 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h3 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h4 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h5 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h6 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -160,7 +117,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -172,7 +129,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -183,10 +140,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -198,7 +168,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -322,7 +291,7 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -332,7 +301,7 @@ $(document).ready(function () {
 
 <p><link rel="stylesheet" href="styles.css" type="text/css"></p>
 <center>
-<img src="images/cathedralpeak.jpg" style="width:50%; border:10px solid; margin-right: 20px" align="middle">
+<img src="images/Joshua.jpg" style="width:50%; border:10px solid; margin-right: 20px" align="middle">
 </center>
 <div id="section" class="section level1">
 <h1></h1>
@@ -346,62 +315,52 @@ $(document).ready(function () {
 <div id="section-3" class="section level1">
 <h1></h1>
 <center>
-<div id="white-identity-violence-and-the-2016-election" class="section level4">
-<h4><i> White Identity, Violence, and the 2016 Election </i></h4>
+<div id="areas-of-focus" class="section level4">
+<h4><strong>Areas of Focus</strong></h4>
+</center>
 </div>
-<div id="working-paper" class="section level4">
-<h4>Working Paper</h4>
+<div id="political-violence-and-white-identity" class="section level4">
+<h4><strong>Political Violence and White Identity</strong></h4>
 </div>
-<div id="this-paper-seeks-to-examine-the-relationship-between-donald-trumps-2016-election-the-alt-right-and-white-identity.-specifically-it-seeks-to-understand-why-white-extremists-broke-with-long-held-precedent-against-supporting-major-politicians-post-civil-rights.-this-paper-will-explore-how-trumps-candidacy-mobilized-members-of-the-white-extremist-alt-right-to-engage-further-with-mainstream-politics.-this-will-be-shown-through-the-use-of-interrupted-time-series-analyses-on-blog-texts-from-the-prominent-using-unsupervised-learning-to-discerm-topic-selection-from-that-text.-then-i-will-perform-both-an-ols-regression-and-a-mediation-analysis-on-2018-anes-pilot-data-to-explore-how-white-identity-influences-support-for-the-alt-right-which-in-turn-predicts-positive-evaluations-of-donald-trump.-overall-this-paper-shows-how-the-salience-of-white-identity-mobilized-extremist-groups-to-engage-in-more-mainstream-political-action-including-overt-support-for-trump-and-efforts-to-appear-more-mainstream-in-tone." class="section level4">
-<h4>This paper seeks to examine the relationship between Donald Trump's 2016 election, the alt-right, and white identity. Specifically, it seeks to understand why white extremists broke with long-held precedent against supporting major politicians post-Civil Rights. This paper will explore how Trump's candidacy mobilized members of the white extremist alt-right to engage further with mainstream politics. This will be shown through the use of interrupted time series analyses on blog texts from the prominent , using unsupervised learning to discerm topic selection from that text. Then, I will perform both an OLS regression and a mediation analysis on 2018 ANES Pilot data to explore how white identity influences support for the alt-right, which in turn predicts positive evaluations of Donald Trump. Overall, this paper shows how the salience of white identity mobilized extremist groups to engage in more mainstream political action, including overt support for Trump and efforts to appear more mainstream in tone.</h4>
+<div id="my-primary-research-and-my-dissertation-are-focused-on-understanding-the-politics-surrounding-white-violence-in-the-united-states.-this-research-looks-both-at-what-motivates-mainstream-whites-to-endorse-forms-of-political-violence-as-well-as-the-factors-that-lead-white-extremists-to-commit-acts-of-hate-or-to-participate-in-forms-of-electoral-politics.-i-am-also-interested-in-understanding-how-whites-evaluate-political-parties-and-the-police-according-to-the-extent-to-which-these-institutions-advance-perceived-white-interests." class="section level4">
+<h4>My primary research and my dissertation are focused on understanding the politics surrounding White violence in the United States. This research looks both at what motivates &quot;mainstream&quot; Whites to endorse forms of political violence, as well as the factors that lead White extremists to commit acts of hate or to participate in forms of electoral politics. I am also interested in understanding how Whites evaluate political parties and the police according to the extent to which these institutions advance perceived White interests.</h4>
 </div>
-<div id="this-project-is-currently-being-expanded-into-my-dissertation." class="section level4">
-<h4>This project is currently being expanded into my dissertation.</h4>
+<div id="an-initial-exerpt-of-my-dissertation-relating-to-alt-right-mobilization-during-the-2016-election-is-forthcoming-in-politics-groups-and-identity.-in-addition-to-dissertation-related-research-i-am-currently-studying-the-impact-of-white-racial-cues-with-dr.-charles-crabtree-and-the-politics-surrounding-firearm-and-militia-culture-with-drs.-ashley-jardina-and-loren-collingwood." class="section level4">
+<h4>An initial exerpt of my dissertation relating to alt-right mobilization during the 2016 election is forthcoming in Politics, Groups, and Identity. In addition to dissertation-related research, I am currently studying the impact of White racial cues with <a href="http://charlescrabtree.com/">Dr. Charles Crabtree</a> and the politics surrounding firearm and militia culture with Drs. <a href="https://sites.duke.edu/ashleyjardina/">Ashley Jardina</a> and <a href="https://www.collingwoodresearch.com/">Loren Collingwood</a>.</h4>
 </div>
+<div id="section-4" class="section level4">
+<h4></h4>
 </div>
-<div id="section-4" class="section level1">
-<h1></h1>
+<div id="section-5" class="section level4">
+<h4></h4>
 </div>
-<div id="section-5" class="section level1">
-<h1></h1>
+<div id="local-politics-and-voting-rights" class="section level4">
+<h4><strong>Local Politics and Voting Rights</strong></h4>
 </div>
-<div id="section-6" class="section level1">
-<h1></h1>
-<center>
-<div id="how-the-2016-election-hardened-conservative-discourse-on-immigration" class="section level4">
-<h4><i> How the 2016 election hardened conservative discourse on immigration </i></h4>
+<div id="the-passage-of-the-california-voting-rights-act-cvra-sought-to-broaden-representation-in-largely-white-controlled-city-councils-throughout-california.-despite-being-passed-in-2001-the-cvra-has-only-recently-seen-an-escalation-in-meaningful-enforcement-and-my-research-has-focused-on-whether-the-enforcement-of-this-act-has-been-successful.-this-initial-investigation-has-led-me-to-study-larger-questions-concerning-voting-rights-enforcement-such-as-looking-at-how-the-cvra-disparately-impacts-different-racial-minorities-and-how-district-creation-can-shape-electoral-outcomes." class="section level4">
+<h4>The passage of the California Voting Rights Act (CVRA) sought to broaden representation in largely white-controlled city councils throughout California. Despite being passed in 2001, the CVRA has only recently seen an escalation in meaningful enforcement, and my research has focused on whether the enforcement of this act has been successful. This initial investigation has led me to study larger questions concerning voting rights enforcement, such as looking at how the CVRA disparately impacts different racial minorities and how district creation can shape electoral outcomes.</h4>
 </div>
-<div id="working-paper-1" class="section level4">
-<h4>Working Paper</h4>
+<div id="this-research-has-been-published-in-the-journal-urban-affairs-and-overlaps-considerably-with-my-work-for-collingwood-research." class="section level4">
+<h4>This research has been published in the journal Urban Affairs and overlaps considerably with my work for <a href="https://www.collingwoodresearch.com/">Collingwood Research</a>.</h4>
 </div>
-<div id="there-has-been-a-recent-increase-in-scholarly-attention-to-the-racialization-of-american-public-opinion-and-the-role-of-fragmentation-in-media-studies.-this-paper-seeks-to-track-how-donald-trumps-campaign-for-president-in-2015-and-2016-impacted-right-wing-media-discourse-over-immigration.-specifically-we-show-that-support-for-trump-by-various-media-outlets-consistently-accompanied-increasingly-hostile-narratives-surrounding-immigration.-this-effect-proved-to-hold-across-the-right-wing-spectrum-including-both-mainstream-and-extreme-news-sources.-we-use-a-combination-of-text-based-machine-learning-techniques-to-develop-models-of-media-trends-for-both-extremist-and-more-mainstream-conservative-news-organizations.-by-collecting-thousands-of-blog-posts-and-news-articles-from-the-white-supremacist-daily-stormer-and-conservative-news-outlets-breitbart-news-and-fox-news-we-were-able-to-show-that-the-trump-campaign-essentially-united-previously-fragmented-media-sources-around-similar-anti-immigrant-frames." class="section level4">
-<h4>There has been a recent increase in scholarly attention to the racialization of American public opinion and the role of fragmentation in media studies. This paper seeks to track how Donald Trump's campaign for president in 2015 and 2016 impacted right-wing media discourse over immigration. Specifically, we show that support for Trump by various media outlets consistently accompanied increasingly hostile narratives surrounding immigration. This effect proved to hold across the right-wing spectrum, including both mainstream and extreme news sources. We use a combination of text-based machine learning techniques to develop models of media trends for both extremist and more mainstream conservative news organizations. By collecting thousands of blog posts and news articles from the white supremacist Daily Stormer, and conservative news outlets Breitbart News and Fox News we were able to show that the Trump campaign essentially united previously fragmented media sources around similar anti-immigrant frames.</h4>
+<div id="section-6" class="section level4">
+<h4></h4>
 </div>
-<div id="this-project-is-being-completed-alongside-dr.-loren-collingwood" class="section level4">
-<h4>This project is being completed alongside <a href="https://www.collingwoodresearch.com/">Dr. Loren Collingwood</a></h4>
+<div id="section-7" class="section level4">
+<h4></h4>
 </div>
+<div id="computational-statistics-and-data-science" class="section level4">
+<h4><strong>Computational Statistics and Data Science</strong></h4>
 </div>
-<div id="section-7" class="section level1">
-<h1></h1>
+<div id="while-i-am-passionate-about-my-substantive-interests-much-of-my-academic-focus-has-been-on-learning-methodology-and-programming-skills.-using-my-experience-with-r-i-have-turned-towards-studying-novel-methods-such-as-machine-learning-text-modelling-and-geospatial-analysis.-these-efforts-help-towards-the-use-of-novel-and-open-source-datasets-which-is-necessary-to-answer-unconventional-questions.-for-instance-my-work-studying-extremist-discourse-has-made-extensive-use-of-text-analysis-while-my-work-on-the-politics-surround-gun-stores-involves-the-creation-of-a-novel-dataset-of-locational-data." class="section level4">
+<h4>While I am passionate about my substantive interests, much of my academic focus has been on learning methodology and programming skills. Using my experience with R, I have turned towards studying novel methods such as machine learning, text modelling, and geospatial analysis. These efforts help towards the use of novel and open-source datasets which is necessary to answer unconventional questions. For instance, my work studying extremist discourse has made extensive use of text analysis, while my work on the politics surround gun stores involves the creation of a novel dataset of locational data.</h4>
+</div>
 </div>
 <div id="section-8" class="section level1">
 <h1></h1>
 </div>
 <div id="section-9" class="section level1">
 <h1></h1>
-<center>
-<div id="implicit-and-explicit-white-identity-cues" class="section level4">
-<h4><i> Implicit and Explicit White Identity Cues </i></h4>
-</div>
-<div id="working-paper-2" class="section level4">
-<h4>Working Paper</h4>
-</div>
-<div id="recent-research-has-found-that-despite-a-long-standing-inclination-for-politicians-to-use-implicit-rather-than-explicit-racial-cues-explicit-cues-are-becoming-increasingly-common-in-political-discourse.-combined-with-the-increased-salience-of-white-identity-in-american-politicis-this-project-explores-whether-white-voters-are-receptive-to-implicit-or-explicit-appeals-to-threats-to-white-identity-and-explores-the-connection-between-such-appeals-and-white-attitudes-towards-violence-and-immigration." class="section level4">
-<h4>Recent research has found that, despite a long-standing inclination for politicians to use implicit rather than explicit racial cues, explicit cues are becoming increasingly common in political discourse. Combined with the increased salience of white identity in American politicis, this project explores whether White voters are receptive to implicit or explicit appeals to threats to white identity and explores the connection between such appeals and White attitudes towards violence and immigration.</h4>
-</div>
-<div id="this-project-is-being-completed-alongside-dr.-charles-crabtree" class="section level4">
-<h4>This project is being completed alongside <a href="http://charlescrabtree.com/">Dr. Charles Crabtree</a></h4>
-</div>
 </div>
 <div id="section-10" class="section level1">
 <h1></h1>
@@ -411,19 +370,6 @@ $(document).ready(function () {
 </div>
 <div id="section-12" class="section level1">
 <h1></h1>
-<center>
-<div id="tactical-gun-stores-white-identity-and-race-in-america" class="section level4">
-<h4><i> Tactical Gun Stores, White Identity, and Race in America </i></h4>
-</div>
-<div id="working-paper-3" class="section level4">
-<h4>Working Paper</h4>
-</div>
-<div id="with-the-rise-of-white-violence-and-armed-militia-groups-in-contemporary-american-politics-this-project-attempts-to-understand-the-cultural-role-of-tactical-gun-stores-i.e.-gun-stores-that-focus-on-the-sale-of-tactical-weapons-and-other-gear.-using-novel-data-collection-from-google-maps-api-to-identify-the-locations-of-different-types-of-gun-stores-we-hope-to-further-understand-what-this-heavily-militarized-aspect-of-gun-culture-tells-us-about-contemporary-white-violence." class="section level4">
-<h4>With the rise of White violence and armed militia groups in contemporary American politics, this project attempts to understand the cultural role of tactical gun stores, i.e. gun stores that focus on the sale of tactical weapons and other gear. Using novel data collection from Google Maps API to identify the locations of different types of gun stores, we hope to further understand what this heavily militarized aspect of gun culture tells us about contemporary White violence.</h4>
-</div>
-<div id="this-project-is-being-completed-alongside-dr.-ashley-jardina-and-dr.-loren-collingwood" class="section level4">
-<h4>This project is being completed alongside <a href="https://sites.duke.edu/ashleyjardina/">Dr. Ashley Jardina</a> and <a href="https://www.collingwoodresearch.com/">Dr. Loren Collingwood</a></h4>
-</div>
 </div>
 <div id="section-13" class="section level1">
 <h1></h1>
@@ -433,19 +379,6 @@ $(document).ready(function () {
 </div>
 <div id="section-15" class="section level1">
 <h1></h1>
-<center>
-<div id="women-and-political-ambition-running-for-us-or-running-for-me" class="section level4">
-<h4><i> Women and Political Ambition: Running for Us or Running for Me? </i></h4>
-</div>
-<div id="working-paper-4" class="section level4">
-<h4>Working Paper</h4>
-</div>
-<div id="the-year-2018-has-been-dubbed-the-year-of-the-woman-because-of-the-increased-number-of-women-not-only-running-for-office-but-also-winning.-for-the-first-time-in-u.s.-history-over-100-women-are-in-the-u.s.-house-with-32-being-newly-elected.-the-freshmen-class-is-also-among-the-most-diverse-in-u.s.-history.-while-the-national-level-has-received-the-lions-share-of-attention-in-the-media-similar-trends-have-been-happening-at-the-state-and-local-level.-what-helps-to-account-for-this-dramatic-increase" class="section level4">
-<h4>The year 2018 has been dubbed the year of the woman because of the increased number of women not only running for office, but also winning. For the first time in U.S. history, over 100 women are in the U.S. House, with 32 being newly elected. The freshmen class is also among the most diverse in U.S. history. While the national level has received the lion’s share of attention in the media, similar trends have been happening at the state and local level. What helps to account for this dramatic increase?</h4>
-</div>
-<div id="this-project-is-being-completed-alongside-the-ucr-gender-lab" class="section level4">
-<h4>This project is being completed alongside the <a href="https://ucr-gender-lab.github.io/projects.html">UCR Gender Lab</a></h4>
-</div>
 </div>
 <div id="section-16" class="section level1">
 <h1></h1>
@@ -599,23 +532,8 @@ $(document).ready(function () {
 </div>
 <div id="section-66" class="section level1">
 <h1></h1>
-</div>
-<div id="section-67" class="section level1">
-<h1></h1>
-</div>
-<div id="section-68" class="section level1">
-<h1></h1>
-</div>
-<div id="section-69" class="section level1">
-<h1></h1>
-</div>
-<div id="section-70" class="section level1">
-<h1></h1>
-</div>
-<div id="section-71" class="section level1">
-<h1></h1>
 <center>
-<p>This website was created and is maintained in R by Sean Long</p>
+<p>This website was created and is maintained by Sean Long</p>
 </center>
 </div>
 
@@ -628,7 +546,7 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -646,7 +564,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
