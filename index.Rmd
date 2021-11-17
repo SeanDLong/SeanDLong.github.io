@@ -30,12 +30,6 @@
 
 ###
 
-
-###
-
-
-###
-
 ###
 
 #### I am primarily interested in quantitative research on questions of political behavior and communication in the United States. Specifically, I work on projects devoted to understanding political violence, social identity, and race and ethnic politics in the American context Primarily using R, I focus on methods leveraging text data and other observational data for causal inference.
