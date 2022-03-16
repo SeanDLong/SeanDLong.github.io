@@ -3,6 +3,13 @@
 
 <link rel="stylesheet" href="styles.css" type="text/css">
 
+###
+
+###
+
+###
+
+###
 
 <img src="images/Hood.jpg" style="width:50%; border:10px solid; margin-right: 20px" align="left">
 
@@ -41,7 +48,7 @@
 
 ###
 
-#### I am primarily interested in quantitative research on questions of political behavior and communication in the United States. Specifically, I work on projects devoted to understanding political violence, social identity, and race and ethnic politics in the American context. Primarily using R, I focus on methods leveraging text data and novel observational data for causal inference.
+#### I focus on quantitative research on questions of political behavior and communication in the United States. Specifically, I work on projects devoted to understanding political violence, social identity, and race and ethnic politics in the American context. Primarily using R, I focus on methods leveraging text data and novel observational data for causal inference.
 
 ####  I also work as a Research Associate with [Collingwood Research](https://www.collingwoodresearch.com/)
 
