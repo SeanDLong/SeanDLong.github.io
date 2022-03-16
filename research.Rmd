@@ -34,7 +34,7 @@
 #### 
 #### 
 #### **Computational Statistics and Data Science**
-#### While I am passionate about my substantive interests, much of my academic focus has been on learning methodology and programming skills. Using my experience with R, I have turned towards studying novel methods such as machine learning, text modelling, and geospatial analysis. These efforts help towards the use of novel and open-source datasets which is necessary to answer unconventional questions. For instance, my work studying extremist discourse has made extensive use of text analysis, while my work on the politics surround gun stores involves the creation of a novel dataset of locational data.
+#### While I am passionate about my substantive interests, much of my academic focus has been on learning methodology and programming skills. Using my experience with R, I have turned towards studying novel methods such as machine learning, text modelling, and geospatial analysis. These efforts help towards the use of novel and open-source datasets which is necessary to answer unconventional questions. For instance, my work studying extremist discourse has made extensive use of text analysis, while my work on the politics surround gun stores involved the creation of a novel dataset of locational data derived from Google Places.
 #
 
 #
