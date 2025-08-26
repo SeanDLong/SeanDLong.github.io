@@ -19,7 +19,7 @@ $$\\[1in]$$
 ###
 
 ###
-### Hello! My name is Sean Long. I am a fifth year PhD student with the [UC Riverside Political Science Department](https://politicalscience.ucr.edu/).
+### Hello! This page is used to host dashboards and github repos, but if you want more information about me, my main website is seandlong.com
 
 ###
 
@@ -41,13 +41,9 @@ $$\\[1in]$$
 
 ###
 
-#### I focus on quantitative research on questions of political behavior and communication in the United States. Specifically, I work on projects devoted to understanding political violence, social identity, and race and ethnic politics in the American context. Primarily using R, I focus on methods leveraging text data and novel observational data for causal inference.
+#### 
 
-####  I also work as a Research Associate with [Collingwood Research](https://www.collingwoodresearch.com/)
 
-#### Check out more [details on my ongoing projects.](https://seandlong.github.io/research)
-#### Details on my background: [Curriculum vitae](https://seandlong.github.io/images/Full_CV.pdf)
-#### Please note that I cannot display personal photographs at this time, given IRB stipulations related to my fieldwork with extremist groups.
 
 ####
 
